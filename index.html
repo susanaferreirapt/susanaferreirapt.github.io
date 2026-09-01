@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Susana Ferreira — imobiliário de luxo em Cascais, Estoril e Sintra, investimento em Ecovillage e o Método Imóvel para profissionais e equipas.">
+<meta name="description" content="Susana Ferreira — imobiliário de luxo em Cascais, Estoril e Sintra, investimento em Eco Village e o Método Imóvel para profissionais e equipas.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Susana Ferreira">
@@ -98,6 +98,9 @@
             gap: 30px;
         }
         .nav-links a {
+            /* "Eco Village" são duas palavras e partia em duas linhas nos
+               ecrãs de ~1100px. Os rótulos do menu nunca devem quebrar. */
+            white-space: nowrap;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -1145,8 +1148,12 @@
             .portrait--cutout img { max-width: 420px; }
             .portrait--feather img { max-width: 520px; }
             /* Com uma coluna, o retrato volta a vir primeiro */
-            .mentoria-img, .split-section--reverse .split-media { order: 1; }
-            .mentoria-text, .split-section--reverse .split-text { order: 2; }
+            .mentoria-img { order: 1; }
+            .mentoria-text { order: 2; }
+            /* Nos terrenos o texto explica o vídeo, por isso vem primeiro.
+               A regra antiga empurrava o vídeo para cima em ecrã estreito. */
+            .split-section--reverse .split-text  { order: 1; }
+            .split-section--reverse .split-media { order: 2; }
             /* A hero deixa de ser sobreposição: ela desce para baixo do
                texto, senão as duas coisas disputam a mesma metade do ecrã. */
             #hero {
@@ -1544,9 +1551,9 @@
             <div class="split-section split-section--reverse reveal">
                 <div class="split-text">
                     <h3>O problema não está no terreno. Está na falta de visão.</h3>
-                    <p>Um terreno parado não precisa continuar sem gerar valor.</p>
+                    <p>Um terreno parado não precisa de continuar sem gerar valor.</p>
                     <p>Neste vídeo, Susana Ferreira mostra como proprietários podem olhar para os seus terrenos de outra forma e identificar caminhos para os rentabilizar, mesmo quando construir não é a opção.</p>
-                    <p>Mais do que ter um ativo, é preciso saber enxergar o seu potencial.</p>
+                    <p>Mais do que ter um ativo, é preciso saber ver o seu potencial.</p>
                 </div>
                 <div class="split-media video-9x16-wrapper">
                     <div class="video-frame video-9x16">
@@ -1649,7 +1656,7 @@
                         <div class="via">
                             <h4>Para imobiliárias</h4>
                             <p>Desenvolver equipas mais preparadas e alinhadas.</p>
-                            <a class="via__cta" href="https://wa.me/351927621146?text=Ol%C3%A1%20Susana%2C%20gostaria%20de%20levar%20o%20M%C3%A9todo%20Im%C3%B3vel%20%C3%A0%20minha%20equipa." target="_blank" rel="noopener">Levar à minha equipa <span aria-hidden="true">&#8594;</span></a>
+                            <a class="via__cta" href="https://wa.me/351927621146?text=Ol%C3%A1%20Susana%2C%20gostaria%20de%20levar%20o%20M%C3%A9todo%20Im%C3%B3vel%20%C3%A0%20minha%20equipa." target="_blank" rel="noopener">Levar o Método à minha equipa <span aria-hidden="true">&#8594;</span></a>
                         </div>
                     </div>
                 </div>
@@ -1678,7 +1685,7 @@
             <div class="contacto-lead reveal">
                 <span class="eyebrow">Vamos conversar</span>
                 <h2 class="contacto-title">O próximo movimento pode começar com uma conversa.</h2>
-                <p class="contacto-sub">Imobiliário, investimento, Eco Village ou mentoria. Fale diretamente com Susana Ferreira.</p>
+                <p class="contacto-sub">Imobiliário, investimento, Eco Village ou mentoria. Fale diretamente com a Susana Ferreira.</p>
             </div>
 
             <div class="contacto-aside reveal">
