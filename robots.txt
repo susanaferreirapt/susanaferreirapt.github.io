@@ -1,0 +1,4 @@
+# Pré-visualização em github.io. Não indexar — o site definitivo terá
+# domínio próprio, e duas cópias indexadas competiriam uma com a outra.
+User-agent: *
+Disallow: /
