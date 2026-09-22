@@ -1760,12 +1760,18 @@
         const navEl = document.querySelector('nav');
         const navToggle = navEl.querySelector('.nav-toggle');
         const heroEl = document.getElementById('hero');
+        const heroTextEl = heroEl ? heroEl.querySelector('.hero-text') : null;
 
-        // Menu transparente enquanto a hero escura estiver por baixo dele.
+        // Menu transparente enquanto o texto da hero ainda estiver visível
+        // por baixo dele. No telemóvel a hero fica mais alta que um ecrã
+        // (texto empilhado sobre o retrato) e usar a altura da hero inteira
+        // mantinha o menu transparente durante todo esse scroll: o texto
+        // passava por trás do logotipo e as letras misturavam-se.
         // Com o menu mobile aberto volta a sólido — o painel é claro.
         const syncNavTone = () => {
-            const overHero = heroEl && window.scrollY < heroEl.offsetHeight - 90;
-            navEl.dataset.top = String(Boolean(overHero) && navEl.dataset.open !== 'true');
+            const navH = navEl.offsetHeight;
+            const textoVisivel = heroTextEl && heroTextEl.getBoundingClientRect().bottom > navH;
+            navEl.dataset.top = String(Boolean(textoVisivel) && navEl.dataset.open !== 'true');
         };
 
         const setNav = (open) => {
